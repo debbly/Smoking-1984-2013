@@ -191,9 +191,9 @@ function updateSlider() {
   time.html(Math.floor(tl.time().toFixed(2)));
   progress.html(tl.progress().toFixed(2));
 
-  var percentageD = smokingData[Math.floor(tl.progress()/0.03)];
+  var percentageD = smokingData[Math.floor(tl.progress()/0.0334)];
   percentage.html(percentageD + '%');
-  year.html(years[Math.floor(tl.progress()/0.03)]);
+  year.html(years[Math.floor(tl.progress()/0.0334)]);
   particleCount = Math.floor(percentageD) * 100;
 
   if (percentageD > 24) {
