@@ -1,0 +1,197 @@
+html, body 
+{
+   background-color: black !important;
+   color: white;
+}
+
+#myCanvas {
+    background-color: grey;
+}
+
+.row {
+  min-height: 80%;  /* Fallback for vh unit */
+  min-height: 80vh; /* You might also want to use
+                        'height' property instead.
+                        
+                        Note that for percentage values of
+                        'height' or 'min-height' properties,
+                        the 'height' of the parent element
+                        should be specified explicitly.
+  
+                        In this case the parent of '.vertical-center'
+                        is the <body> element */
+
+  /* Make it a flex container */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; 
+  
+  /* Align the bootstrap's container vertically */
+    -webkit-box-align : center;
+  -webkit-align-items : center;
+       -moz-box-align : center;
+       -ms-flex-align : center;
+          align-items : center;
+  
+  /* In legacy web browsers such as Firefox 9
+     we need to specify the width of the flex container */
+  width: 100%;
+  
+  /* Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
+     hence the bootstrap's container won't be aligned to the center anymore.
+  
+     Therefore, we should use the following declarations to get it centered again */
+         -webkit-box-pack : center;
+            -moz-box-pack : center;
+            -ms-flex-pack : center;
+  -webkit-justify-content : center;
+          justify-content : center;
+}
+
+.header {
+	text-align: center;
+	font-family: 'Amatic SC', cursive;
+	color: white;
+	font-size: 102px;
+	font-weight: bold;
+}
+
+.product {
+  display:inline-block;
+  color:black;
+  font-size:60px;
+  font-weight:300;
+}
+
+.suffix {
+  display:inline-block;
+  font-size: 60px;
+  font-weight: 700;
+  color: #86CC01;
+  font-weight: 700;
+}
+
+.tagline {
+  display:inline-block;
+  margin-left:20px;
+  font-size:36px;
+}
+
+#year {
+	text-align: center;
+	font-family: 'Karla', sans-serif;
+	color: white;
+}
+
+#year_ { 
+	font-size: 32px;
+}
+
+#percent { 
+	font-size: 32px;
+}
+
+#percentage {
+	text-align: center;
+	color: white;
+	font-family: 'Karla', sans-serif;
+}
+
+.center {
+     float: none;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+#demo {
+  text-align:center;
+  position:relative;
+  visibility:hidden;
+}
+
+#controls {
+  font-family: 'Karla', sans-serif;
+  margin-top:15px;
+  text-align: center;
+  color: white;
+}
+
+#time {
+	text-align: center;
+	margin-left:25px;
+}
+
+.slider {
+  width:420px;
+  margin:auto;
+}
+.sliderValues {
+  margin:10px;
+}
+
+.sliderValues span {
+  font-size:24px;
+}
+
+#timeScaleSlider {
+  width:260px;
+
+}
+
+button {
+  padding:1em;
+  margin:10px 0 10px 0;
+  font-size:12px;
+  cursor:pointer;
+}
+
+li {
+ display:inline-block;
+ margin-right:25px;
+  color:#aaa;
+}
+
+.ui-widget-content {
+  background-color:rgba(255, 255, 255, 0.2);
+}
+
+.link {
+  display:inline-block;
+  padding-top:20px;
+  text-decoration:none;
+}
+
+a.link:link, a.link:visited {
+  color:rgba(255, 100, 0, 0.3);
+}
+
+a.link:hover {
+  color:rgba(255, 100, 0, 0.95);
+}
+
+.my-btn  {
+  background-color: hsl(249, 38%, 20%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#29224d", endColorstr="#251f46");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#29224d), to(#251f46));
+  background-image: -moz-linear-gradient(top, #29224d, #251f46);
+  background-image: -ms-linear-gradient(top, #29224d, #251f46);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #29224d), color-stop(100%, #251f46));
+  background-image: -webkit-linear-gradient(top, #29224d, #251f46);
+  background-image: -o-linear-gradient(top, #29224d, #251f46);
+  background-image: linear-gradient(#29224d, #251f46);
+  border-color: #251f46 #251f46 hsl(249, 38%, 19.5%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.03);
+  -webkit-font-smoothing: antialiased;
+}
+
+.footer {
+	padding-top: 10px;
+	margin-left: auto;
+    margin-right: auto;
+    font-family: 'Karla', sans-serif;
+    font-size: 10px;
+}
