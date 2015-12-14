@@ -39,7 +39,7 @@ var maxVelocity = 20;
 var targetFPS = 33;
 
 // Set the dimensions of the canvas as variables so they can be used.
-var canvasWidth = 700;
+var canvasWidth = 800;
 var canvasHeight = 400;
 var halfWidth = 350;
 
