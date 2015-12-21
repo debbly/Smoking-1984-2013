@@ -185,7 +185,21 @@ TweenLite.set("#demo", {visibility:"visible"})
 tl.from("#timeline_txt", 90.0, {y:-30, opacity:0})
   .from("#lite_txt", 90.3, {y:30, opacity:0}, "-=0.3")
 .staggerFrom("li", 10.0, {y:20, opacity:0}, 0.1)
-.set(buttons, {opacity:0.2})
+.set(buttons, {opacity:0.2});
+
+$('#progressSlider').append('<div class="my-handle ui-slider-handle"><svg height="18" width="14"><rect width="5" height="20"/></svg></div>');
+$('#timeScaleSlider').append('<div class="my-handle ui-slider-handle"><svg height="18" width="14"><rect width="5" height="20"/></svg></div>');
+
+
+$( "#progressSlider" ).slider({
+  range: false,
+  min: 0,
+  max: 1,
+  step:.001,
+  slide: function ( event, ui ) {
+    tl.progress( ui.value ).pause();
+  }
+}); 
 
 function updateSlider() {
   time.html(Math.floor(tl.time().toFixed(2)));
@@ -207,6 +221,8 @@ function updateSlider() {
   } else if (percentageD > 5) {
       maxVelocity = 2;
   }
+
+  $("#progressSlider").slider("value", tl.progress());
 
   if (prevPart != particleCount) {
       //console.log(true);
@@ -267,15 +283,33 @@ $("#pauseBtn").on("click", function(){
   tl.pause();
 });
 
-$("#resumeBtn").on("click", function(){
-  //Resume playback in current direction.
-  tl.resume();
-});
 
 $("#reverseBtn").on("click", function(){
   tl.reverse();
 });
 
-$("#restartBtn").on("click", function(){
-  tl.restart();
-});
+$("#timeScaleSlider").slider({
+  value:1,
+  range: false,
+  min: 0.25,
+  max: 4,
+  step:0.25,
+  slide: function ( event, ui ) {
+    tl.timeScale(ui.value );
+    timeScale.html(ui.value)
+  },
+  change: function() {
+    if(tl.paused()){
+      tl.resume();
+    }
+    
+    if (tl.progress() == 1){
+      tl.restart();
+    }
+    
+    if(tl.reversed() && tl.progress() === 0){
+      tl.restart();
+    }
+  }
+  
+}); 

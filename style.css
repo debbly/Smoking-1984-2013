@@ -126,8 +126,10 @@ html, body
 }
 
 .slider {
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
   width:420px;
-  margin:auto;
 }
 .sliderValues {
   margin:10px;
@@ -139,7 +141,6 @@ html, body
 
 #timeScaleSlider {
   width:260px;
-
 }
 
 button {
@@ -152,11 +153,30 @@ button {
 li {
  display:inline-block;
  margin-right:25px;
-  color:#aaa;
+ color:#aaa;
 }
 
 .ui-widget-content {
   background-color:rgba(255, 255, 255, 0.2);
+  border: none;
+}
+
+.slider .ui-state-default {
+    background: none;
+}
+
+.slider.ui-slider .ui-slider-handle {
+    width: 14px;
+    height: 18px;
+    margin-left: -5px;
+    top:-4px;
+    border:blue;
+    background-color: #B70000;
+    cursor:pointer;
+}
+
+.slider {
+    height: 10px;
 }
 
 .link {

@@ -1,12 +1,13 @@
 <html>
 <head>
 	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Karla:700' rel='stylesheet' type='text/css'>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 
 	<title>Canvas</title>
 </head>
@@ -22,15 +23,16 @@ lifetime and were still smoking in this year</div>
 
   <div class="span7 center">
   	<canvas id="myCanvas" width="800px" height="400px"></canvas>
+    <div class="slider" id="progressSlider"></div>
   	<div id="controls">
-    	<div class="sliderValues">time: <span id="time"></span>s / progress: <span id="progress"></span></div>
-    	<div class="slider" id="progressSlider"></div>
     	<button class="btn my-btn" id="playBtn">play()</button>
     	<button class="btn my-btn" id="pauseBtn">pause()</button>
-    	<button class="btn my-btn" id="resumeBtn">resume()</button>
     	<button class="btn my-btn" id="reverseBtn">reverse()</button>
-    	<button class="btn my-btn" id="restartBtn">restart()</button>
   </div>
+  <div style="text-align:left; width:420px; margin:auto">
+      <div class="slider" id="timeScaleSlider" style="display:inline-block"></div>
+      <div class="sliderValues" style="display:inline-block">timeScale: <span id="timeScale" >1</span></div>
+  </div>  
   <script src="canvas.js"></script>
 </div>
 </div>
