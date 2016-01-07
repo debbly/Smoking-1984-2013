@@ -5,7 +5,7 @@ var smokingData = [24.9, 26.7, 25.6, 21.4,
                    16.3, 16.4, 15.8, 15.4,
                    14.6, 14, 13.3, 13.8,
                    13.3, 13.1, 11.9, 12,
-                   12.7, 11.7];
+                   12.7, 11.7, 0.0];
 var years = ['1984', '1985', '1986', '1987', 
                    '1988', '1989', '1990', '1991',
                    '1992', '1993', '1994', '1995',
@@ -13,7 +13,7 @@ var years = ['1984', '1985', '1986', '1987',
                    '2000', '2001', '2002', '2003',
                    '2004', '2005', '2006', '2007',
                    '2008', '2009', '2010', '2011',
-                   '2012', '2013'];
+                   '2012', '2013', '2014'];
 // var smoke = {'1984': 24.9, '1985': 26.7, '1986': 25.6, '1987': 21.4,
 //              '1988': 22.7, '1989': 21.2, '1990': 19.4, '1991': 19.2,
 //              '1992': 20.0, '1993': 18.2, '1994': 16.6, '1995': 15.9,
@@ -205,7 +205,12 @@ function updateSlider() {
   time.html(Math.floor(tl.time().toFixed(2)));
   progress.html(tl.progress().toFixed(2));
 
+  if (years[Math.floor(tl.progress()/0.0334)] > 2013) {
+      t1.restart();
+  }
+
   var percentageD = smokingData[Math.floor(tl.progress()/0.0334)];
+
   percentage.html(percentageD + '%');
   year.html(years[Math.floor(tl.progress()/0.0334)]);
   particleCount = Math.floor(percentageD) * 100;
