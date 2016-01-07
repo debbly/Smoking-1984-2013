@@ -39,9 +39,9 @@ var maxVelocity = 20;
 var targetFPS = 33;
 
 // Set the dimensions of the canvas as variables so they can be used.
-var canvasWidth = 800;
-var canvasHeight = 400;
-var halfWidth = 350;
+var canvasWidth = $(document).width() + 15;
+var canvasHeight = $(document).height();
+var halfWidth = canvasWidth/2.0;
 
 // Create an image object (only need one instance)
 var imageObj = new Image();
@@ -241,7 +241,7 @@ function updateSlider() {
 function draw() {
   // Clear the drawing surface and fill it with a black background
   context.fillStyle = "rgba(0, 0, 0, 0.5)";
-  context.fillRect(0, 0, 700, 400);
+  context.fillRect(0, 0, $(document).width(), $(document).height());
 
   // Go through all of the particles and draw them.
   particles.forEach(function(particle) {

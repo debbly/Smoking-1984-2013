@@ -1,12 +1,15 @@
 html, body 
 {
-   background-color: black !important;
-   color: white;
-   font-family: 'Oswald', sans-serif;
+ background-color: black !important;
+ color: white;
+ font-family: 'Oswald', sans-serif;
 }
 
 #myCanvas {
-    background-color: grey;
+  background-color: grey;
+  position: fixed;
+  width: 100%;
+  height: 100%;
 }
 
 .row {
@@ -22,93 +25,99 @@ html, body
                         In this case the parent of '.vertical-center'
                         is the <body> element */
 
-  /* Make it a flex container */
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex; 
-  
-  /* Align the bootstrap's container vertically */
-    -webkit-box-align : center;
-  -webkit-align-items : center;
-       -moz-box-align : center;
-       -ms-flex-align : center;
-          align-items : center;
-  
+                        /* Make it a flex container */
+                        display: -webkit-box;
+                        display: -moz-box;
+                        display: -ms-flexbox;
+                        display: -webkit-flex;
+                        display: flex; 
+
+                        /* Align the bootstrap's container vertically */
+                        -webkit-box-align : center;
+                        -webkit-align-items : center;
+                        -moz-box-align : center;
+                        -ms-flex-align : center;
+                        align-items : center;
+
   /* In legacy web browsers such as Firefox 9
-     we need to specify the width of the flex container */
+  we need to specify the width of the flex container */
   width: 100%;
   
   /* Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
      hence the bootstrap's container won't be aligned to the center anymore.
   
      Therefore, we should use the following declarations to get it centered again */
-         -webkit-box-pack : center;
-            -moz-box-pack : center;
-            -ms-flex-pack : center;
-  -webkit-justify-content : center;
-          justify-content : center;
-}
+     -webkit-box-pack : center;
+     -moz-box-pack : center;
+     -ms-flex-pack : center;
+     -webkit-justify-content : center;
+     justify-content : center;
+   }
 
-.header {
-	text-align: center;
-	font-family: 'Oswald', sans-serif;
-	color: white;
-	font-size: 92px;
-	font-weight: 700;
-}
+   .header {
+     text-align: center;
+     font-family: 'Oswald', sans-serif;
+     color: white;
+     font-size: 112px;
+     font-weight: 400;
+     position: relative;
+   }
 
-.product {
-  display:inline-block;
-  color:black;
-  font-size:60px;
-  font-weight:300;
-}
+   .product {
+    display:inline-block;
+    color:black;
+    font-size:72px;
+    font-weight:300;
+  }
 
-.suffix {
-  display:inline-block;
-  font-size: 60px;
-  font-weight: 700;
-  color: #86CC01;
-  font-weight: 700;
-}
+  .suffix {
+    display:inline-block;
+    font-size: 72px;
+    font-weight: 700;
+    color: #86CC01;
+  }
 
-.tagline {
-  display:inline-block;
-  margin-left:20px;
-  font-size:36px;
-}
+  .tagline {
+    display:inline-block;
+    margin-left:20px;
+    font-size:48px;
+  }
 
-#year {
-	text-align: center;
-	color: white;
-}
+  #year {
+   font-size: 18px;
+   color: #DECDCD;
+   text-align: center;
+   position: relative;
+ }
 
-#year_ { 
-	font-size: 35px;
-	color: #B70000;
-	font-weight: 700;
-}
+ #year_ { 
+   font-size: 56px;
+   color: #321313;
+   font-weight: 700;
+   position: relative;
+ }
 
-#percent { 
-	font-size: 32px;
-	color: #B70000;
-	font-weight: 700;
-}
+ #percent { 
+   font-size: 56px;
+   color: #321313;
+   font-weight: 700;
+   position: relative;
+ }
 
-#percentage {
-	text-align: center;
-	color: white;
-}
+ #percentage {
+   font-size: 18px;
+   color: #DECDCD;
+   text-align: center;
+   position: relative;
+ }
 
-.center {
-     float: none;
-     margin-left: auto;
-     margin-right: auto;
-}
+ .center {
+   float: none;
+   margin-left: auto;
+   margin-right: auto;
+ }
 
-#demo {
+ #demo {
   text-align:center;
   position:relative;
   visibility:hidden;
@@ -118,11 +127,13 @@ html, body
   margin-top:15px;
   text-align: center;
   color: white;
+  position: relative;
 }
 
 #time {
 	text-align: center;
 	margin-left:25px;
+  position: relative;
 }
 
 .slider {
@@ -164,21 +175,21 @@ li {
 }
 
 .slider .ui-state-default {
-    background: none;
+  background: none;
 }
 
 .slider.ui-slider .ui-slider-handle {
-    width: 14px;
-    height: 18px;
-    margin-left: -5px;
-    top:-4px;
-    border:blue;
-    background-color: #B70000;
-    cursor:pointer;
+  width: 14px;
+  height: 18px;
+  margin-left: -5px;
+  top:-4px;
+  border:blue;
+  background-color: #B70000;
+  cursor:pointer;
 }
 
 .slider {
-    height: 10px;
+  height: 10px;
 }
 
 .link {
@@ -213,9 +224,11 @@ a.link:hover {
 }
 
 .footer {
-	padding-top: 10px;
-	margin-left: auto;
-    margin-right: auto;
-    font-size: 10px;
-    color: #585858;
+  font-size: 10px;
+  color: #FFFFFF;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
 }

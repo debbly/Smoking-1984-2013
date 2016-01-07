@@ -2,42 +2,48 @@
 <head>
 	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Karla:700' rel='stylesheet' type='text/css'>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 
-	<title>1984 - 2013</title>
 </head>
+<canvas id="myCanvas"></canvas>
+
+<div class= "row">
+  <title>1984 - 2013</title>
 
 <div class="header">1984 - 2013</div>
 
-<div id="year"> in <span id="year_"> year </span> </div>
-<div id="percentage"> <span id="percent">%</span> of Californians smoked at least 100 cigarettes <br> in their
-lifetime and were still smoking in this year</div>
-
 <body>
-<div class="row">
 
-  <div class="span7 center">
-  	<canvas id="myCanvas" width="800px" height="400px"></canvas>
-    <div class="slider" id="progressSlider"></div>
-  	<div id="controls">
-    	<button class="btn my-btn" id="playBtn">play()</button>
-    	<button class="btn my-btn" id="pauseBtn">pause()</button>
-    	<button class="btn my-btn" id="reverseBtn">reverse()</button>
-  </div>
-  <div style="text-align:left; width:420px; margin:auto">
-      <div class="slider" id="timeScaleSlider" style="display:inline-block"></div>
-      <div class="sliderValues" style="display:inline-block">speed: <span id="timeScale" >1</span></div>
-  </div>  
-  <script src="canvas.js"></script>
-</div>
-</div>
-  <div class="row-fluid">
-	 <div class="footer">Data gathered from <a href="http://catalog.data.gov/dataset/smoking-prevalence-in-adults-1984-2013">Data.gov</a>. Data visualization made by <a href="http://debbly.me">Debbie Ly</a>.</div>
+<div class="span7 center">
+
+    <div id="year"> in <span id="year_"> year </span> </div>
+    <div id="percentage"> <span id="percent">%</span> <br> of Californians smoked at least 100 cigarettes <br> in their
+      lifetime and were still smoking in this year</div>
+      <!--
+        <div class="slider" id="progressSlider"></div>
+      <div id="controls">
+       <button class="btn my-btn" id="playBtn">play</button>
+       <button class="btn my-btn" id="pauseBtn">pause</button>
+       <button class="btn my-btn" id="reverseBtn">reverse</button>
+     </div>
+
+       <!-- Uncomment until I find better sliders
+       <div style="text-align:left; width:420px; margin:auto">
+        <div class="slider" id="timeScaleSlider" style="display:inline-block"></div>
+        <div class="sliderValues" style="display:inline-block">speed: <span id="timeScale" >1</span></div>
+      </div>  
+    -->
+    <script src="canvas.js"></script>
   </div>
 </body>
+<div class="row-fluid">
+  <div class="footer">Data gathered from <a href="http://catalog.data.gov/dataset/smoking-prevalence-in-adults-1984-2013">Data.gov</a>. Data visualization made by <a href="http://debbly.me">Debbie Ly</a>.
+  </div>
+</div>
+</div>
 </html>
