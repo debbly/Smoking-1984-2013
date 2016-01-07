@@ -85,7 +85,7 @@ html, body
 
   #year {
    font-size: 18px;
-   color: #DECDCD;
+   color: #D8D8D8;
    text-align: center;
    position: relative;
  }
@@ -106,7 +106,7 @@ html, body
 
  #percentage {
    font-size: 18px;
-   color: #DECDCD;
+   color: #D8D8D8;
    text-align: center;
    position: relative;
  }
@@ -225,7 +225,7 @@ a.link:hover {
 
 .footer {
   font-size: 10px;
-  color: #FFFFFF;
+  color: #D8D8D8;
   position: absolute;
   right: 0;
   bottom: 0;
